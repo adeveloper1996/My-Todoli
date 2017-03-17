@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="shoplist.project.kz.mytodoli.screen.add_todo.AddTodoActivity"
+    tools:showIn="@layout/activity_add_todo">
+
+    <LinearLayout
+        android:id="@+id/ll_title_todo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:focusable="true"
+        android:elevation="@dimen/fab_margin"
+        android:focusableInTouchMode="true"
+        android:background="@color/colorPrimary">
+
+        <shoplist.project.kz.mytodoli.utils.CustomTextInputLayout
+            android:id="@+id/todo_custom_text"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/e_txt_title_todo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/title"
+                android:lines="2"
+                android:inputType="textAutoCorrect|textCapSentences"
+                android:maxLines="3"
+                android:textColor="@color/icons"
+                android:textColorHint="@android:color/white"
+                android:gravity="start|bottom"
+                android:layout_marginRight="32dp"
+                android:layout_marginLeft="32dp"/>
+
+        </shoplist.project.kz.mytodoli.utils.CustomTextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="42dp"
+            android:layout_marginRight="42dp"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:background="@android:color/transparent"
+                android:padding="6dp"
+                android:src="@drawable/ic_alarm_black_24dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="start"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/remind_me"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/todo_has_date_switch_compat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_date_and_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/e_txt_todo_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:textIsSelectable="false" />
+
+                <EditText
+                    android:id="@+id/e_txt_todo_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:textIsSelectable="false" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/newToDoDateTimeReminderTextView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="start"
+                android:text="@string/remind_date_and_time"
+                android:textColor="@color/colorSecondaryText"
+                android:visibility="gone"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
