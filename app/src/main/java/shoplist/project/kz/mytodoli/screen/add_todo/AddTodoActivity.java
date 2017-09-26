@@ -83,10 +83,10 @@ public class AddTodoActivity extends AppCompatActivity implements AddTodoView,Vi
             Log.i("ssss","id" + id);
             realm = Realm.getDefaultInstance();
             todoItems = realm.where(TodoItem.class).equalTo("id", id).findFirst();
-            userColor = todoItems.getTodoColor();
-            userHasReminder = todoItems.isReminder();
-            userRemindDate = todoItems.getToDoDate();
             titleTodo.setText(todoItems.getTitle());
+            userHasReminder = todoItems.isReminder();
+            userColor = todoItems.getTodoColor();
+            userRemindDate = todoItems.getToDoDate();
 
             if(userRemindDate !=  null && userHasReminder){
                 switComRemind.setChecked(true);

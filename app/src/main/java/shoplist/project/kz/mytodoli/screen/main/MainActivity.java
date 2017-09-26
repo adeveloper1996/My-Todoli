@@ -72,15 +72,16 @@ public class MainActivity extends AppCompatActivity{
     }
 
     private void setAlarms(){
-        if(realmResults!=null){
+        if(realmResults != null){
             for(TodoItem item : realmResults){
-                if(item.isReminder() && item.getToDoDate()!=null){
+                if(item.isReminder() && item.getToDoDate() != null){
                     if(item.getToDoDate().before(new Date())){
                         realm.beginTransaction();
                         item.setToDoDate(null);
                         realm.commitTransaction();
                         continue;
                     }
+
                     Intent i = new Intent(this, TodoNotification.class);
                     i.putExtra(TodoNotification.TODOID, item.getId());
                     i.putExtra(TodoNotification.TODOTEXT, item.getTitle());
@@ -130,8 +131,7 @@ public class MainActivity extends AppCompatActivity{
         if (exit) {
             finish(); // finish activity
         } else {
-            Toast.makeText(this, "Нажмите еще раз чтобы выйти",
-                    Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Нажмите еще раз чтобы выйти", Toast.LENGTH_SHORT).show();
             exit = true;
             new Handler().postDelayed(new Runnable() {
                 @Override

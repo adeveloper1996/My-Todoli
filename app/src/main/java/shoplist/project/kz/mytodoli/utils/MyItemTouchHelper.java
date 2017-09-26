@@ -9,7 +9,9 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 
 public class MyItemTouchHelper extends ItemTouchHelper.Callback {
     private ItemTouchHelperAdapter adapter;
-    public interface ItemTouchHelperAdapter{
+
+    public interface ItemTouchHelperAdapter {
+
         void onItemMoved(int fromPosition, int toPosition);
         void onItemRemoved(int position);
     }
@@ -46,4 +48,6 @@ public class MyItemTouchHelper extends ItemTouchHelper.Callback {
     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
         adapter.onItemRemoved(viewHolder.getAdapterPosition());
     }
+
+
 }

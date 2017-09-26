@@ -53,13 +53,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fab_margin"
             android:layout_marginLeft="42dp"
             android:layout_marginRight="42dp"
             android:layout_marginTop="32dp"
             android:gravity="center"
-            android:padding="10dp"
-            android:layout_marginBottom="@dimen/fab_margin"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="10dp">
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -101,9 +101,9 @@
             android:layout_marginRight="48dp"
             android:animateLayoutChanges="true"
             android:gravity="center"
+            android:orientation="vertical"
             android:padding="10dp"
-            android:visibility="gone"
-            android:orientation="vertical">
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -142,8 +142,8 @@
                 android:gravity="start"
                 android:text="@string/remind_date_and_time"
                 android:textColor="@color/colorSecondaryText"
-                android:visibility="gone"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:visibility="gone" />
 
         </LinearLayout>
 

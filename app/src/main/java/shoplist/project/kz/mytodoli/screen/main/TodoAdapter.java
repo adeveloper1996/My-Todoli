@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -40,6 +41,8 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.MyHolder> impl
     private List<TodoItem> itemList;
     private Context context;
     private Realm realm;
+    private ImageButton btnDelete;
+    private TodoAdapter adapter;
 
     public TodoAdapter(List<TodoItem> itemList, Context context) {
         this.itemList = itemList;
@@ -59,8 +62,10 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.MyHolder> impl
             img = (ImageView) itemView.findViewById(R.id.img_to_do_item);
             txtTitle = (TextView) itemView.findViewById(R.id.txt_to_do_title);
             txtDate = (TextView) itemView.findViewById(R.id.txt_to_do_date);
+            btnDelete = (ImageButton) itemView.findViewById(R.id.btn_clear);
 
             llTodoItem.setOnClickListener(this);
+            btnDelete.setOnClickListener(this);
         }
 
         @Override
@@ -71,6 +76,9 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.MyHolder> impl
                     intent.putExtra(AddTodoActivity.ADDTODOID,id);
                     Log.i("ssss","id" + id);
                     context.startActivity(intent);
+                    break;
+                case R.id.btn_clear:
+                   // onItemRemoved(getAdapterPosition());
                     break;
             }
         }
@@ -133,9 +141,11 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.MyHolder> impl
         notifyItemRemoved(position);
     }
 
+
+
     private void deleteAlarm(Intent i, int requestCode){
         if(doesPendingIntentExist(i, requestCode)){
-            PendingIntent pi = PendingIntent.getService(context, requestCode,i, PendingIntent.FLAG_NO_CREATE);
+            PendingIntent pi = PendingIntent.getService(context, requestCode, i, PendingIntent.FLAG_NO_CREATE);
             pi.cancel();
             getAlarmManager().cancel(pi);
         }

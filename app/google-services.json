@@ -1,0 +1,105 @@
+{
+  "project_info": {
+    "project_number": "870576261366",
+    "firebase_url": "https://loginactivity-a76c4.firebaseio.com",
+    "project_id": "loginactivity-a76c4",
+    "storage_bucket": "loginactivity-a76c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870576261366:android:0b5bbbe1867746b8",
+        "android_client_info": {
+          "package_name": "android.com.firebaseauthentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870576261366-v0esuaf74mm4pat49nlsgcjg86jgk931.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "android.com.firebaseauthentication",
+            "certificate_hash": "9276f61c2fd7598f37c56b61d4ac361b8cb960e9"
+          }
+        },
+        {
+          "client_id": "870576261366-esbtk5lc37vr5osotsr36v2fljooj5j1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyhUqbL_juOVogD3kADnVrVQLAa7Xt7kk"
+        },
+        {
+          "current_key": "AIzaSyASvKEIFU7AGtF_OpDM-aJxHlRRYZui2eY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870576261366-esbtk5lc37vr5osotsr36v2fljooj5j1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870576261366:android:62baa699adbb41da",
+        "android_client_info": {
+          "package_name": "shoplist.project.kz.mytodoli"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870576261366-jqri01srf6ar6dkvgoj29vjdtknrglg4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "shoplist.project.kz.mytodoli",
+            "certificate_hash": "9276f61c2fd7598f37c56b61d4ac361b8cb960e9"
+          }
+        },
+        {
+          "client_id": "870576261366-esbtk5lc37vr5osotsr36v2fljooj5j1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyhUqbL_juOVogD3kADnVrVQLAa7Xt7kk"
+        },
+        {
+          "current_key": "AIzaSyASvKEIFU7AGtF_OpDM-aJxHlRRYZui2eY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870576261366-esbtk5lc37vr5osotsr36v2fljooj5j1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
